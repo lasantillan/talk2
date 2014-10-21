@@ -1,0 +1,777 @@
+/* MIXINS */
+@mixin clear-fix() {
+  clear: both;
+  float: none;
+} 
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+body, html {
+  overflow-x: hidden;
+}
+
+/* STYLES */
+#container{
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  position: relative;
+
+
+  .centered {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    left:0;
+    right:0;
+    display: block;
+    position: relative;
+  }
+
+  .section {
+    width: 100%;
+    display: block;
+    /* max-width: 900px; */
+    position: relative;
+    /* margin: auto;
+    left: 0;
+    right: 0; */  
+  }
+
+  .talk2.logo {
+    background: url(../img/svg/Talk2Logo.svg) center top no-repeat;
+    background-size: cover;
+    display: block;
+    width: 8.25em;
+    height: 3.65em;
+    text-indent: -100%;
+    overflow: hidden;
+  }
+
+   .talk2.logo2 {
+    background: url(../img/svg/Talk2Logo.svg) center top no-repeat;
+    background-size: cover;
+    display: block;
+    width: 11.25em;
+    height: 4.65em;
+    text-indent: -100%;
+    overflow: hidden;
+
+    float: left;
+    margin: -.25em 5em;
+    margin-left: 5.75em;
+
+  }
+
+  
+
+  #header {
+  	height: 5.5em;
+    //border-bottom: 3px solid #616161;
+    position: relative;
+    background-color: #FFF;
+    z-index: 10;
+
+    .talk2.logo {
+      float: left;
+      margin: 1.25em 5em;
+    }
+
+    .menu {
+      float: right;
+      margin: 2.25em 10% 0 0;
+
+      ul {
+        display: inline-block;
+
+        li {
+          display: inline-block;
+		  margin-right: 4em;
+		  font-size: .89em;
+		  text-transform: uppercase;
+		  font-weight: 600;
+
+          a {
+            text-decoration: none;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    &:after {
+      @include clear-fix();
+    }
+  }
+
+  #product {
+    //top: 3.5em;
+    height: 41.125em;
+    border-bottom: 3px solid #616161;
+    background: url(../img/png/ImageWoman.png) left top no-repeat;
+    background-size: cover;
+
+    h1.title {
+      font-size: 2.5em;
+      line-height: 1.15em;
+      color: #FFF;
+      top: 3em;
+      right: 10%;
+      position: absolute;
+      z-index: 2;
+      width: 10em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      line-height: 1.35em;
+      color: #FFF;
+      width: 18em;
+      top: 10em;
+      right: 7%;
+      position: absolute;
+      z-index: 2;
+
+      &.buttons {
+        top: 14em;
+        .button {
+          width: 40%;
+          float: left;
+          display: block;
+          text-indent: -200%;
+          overflow: hidden;
+          height: auto;
+          min-height: 3em;
+          margin: 10% 1%;
+          background-color: transparent;
+          border-radius: (10px);
+          -webkit-border-radius: (10px);
+
+          &.googleplay {
+            background: url(../img/png/BadgeGooglePlay.png) transparent left center no-repeat;
+            background-size: contain;
+          }
+
+          &.appstore {
+            background: url(../img/png/BadgeAppStore.png) transparent left center no-repeat;
+            background-size: contain;
+            margin-left: 10%;
+          }
+        }
+      }
+    }
+
+    &:after {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background: rgba(0,0,0,.5);
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+  }
+
+  #features {
+    //top: 1.5em;
+    padding-top: 5.5em;
+
+    .hero {
+      width: 50%;
+      height: 100%;
+      min-height: 45em;
+      background-size: contain;
+      display: block;
+      float: right;
+      background: url(../img/png/Phone1.png) left top no-repeat;
+
+    }
+
+    .features ul {
+      width: 50%;
+      max-width: 46.375em;
+      display: block;
+      height: auto;
+      min-height: 35em;
+
+      .feature {
+        float: left;
+        height: auto;
+        min-height: 9em;
+        width: 100%;
+        margin: 1.5em 0 12 2em;
+        background: url(../img/svg/OutlineGray.svg) left top no-repeat;
+        background-size: 100% 100%;
+        display: block;
+        padding: 3.5em 4em 3.5em 5.75em;
+        position: relative;
+        cursor: pointer;
+
+        &.phonenum {
+          padding-top: 3.25em;
+        }
+
+        &.philprice {
+          padding-top: 3.25em;
+        }
+
+        &.freesms {
+          padding-top: 4em;
+        }
+
+        &.rates {
+          padding-top: 3.25em;
+        }
+
+        &:before{
+          display: block;
+          content: " ";
+          width: 4.5em;
+          height: 4.5em;
+          left: .5em;
+          margin: 0 .5em;
+          top: 3em;
+          position: absolute;
+        }
+
+        &.phonenum:before{
+          background: url(../img/svg/IconPhone.svg) left top no-repeat;
+          background-size: cover;
+        }
+
+        &.philprice:before{
+          background: url(../img/svg/IconPeso.svg) left top no-repeat;
+          background-size: cover;
+        }
+
+        &.freesms:before{
+          background: url(../img/svg/IconMessage.svg) left top no-repeat;
+          background-size: cover;
+          top: 4em;
+        }
+
+        &.rates:before{
+          background: url(../img/svg/IconCall.svg) left top no-repeat;
+          background-size: cover;
+          top: 2.5em;
+
+        }
+
+        span {
+          font-size: .80em;
+          font-weight: 300;
+          display: block;
+          padding-top:.25em;
+        }
+
+        p {
+          font-size: 1em;
+          font-weight: 600;
+          display: block;
+        }
+
+        &.selected {
+          background: url(../img/svg/OutlineRed.svg) left top no-repeat;
+          background-size: 100% 100%;
+          
+          &:after {
+            @include clear-fix();
+          }
+        }
+      }
+
+      li {
+
+    }
+
+    }
+
+    
+    
+  }
+
+  #packages {
+    top: 15em;
+    background-color: #{$talk2red};
+    min-height: 25em;
+
+    h1.title {
+      font-size: 3.5em;
+      line-height: 1.15em;
+      color: #FFF;
+      padding: 1em 0 .5em 1.75em;
+      z-index: 2;
+      width: 10em;
+      font-weight:600;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      line-height: 1.35em;
+      color: #FFF;
+      width: 20em;
+      margin: -1em 0 1.5em 5.05em;
+      z-index: 2;
+    }
+
+
+    .hero {
+      width: 44.125em;
+      height: 33.75em;
+      background: url(../img/png/PhonePerspective.png) left top no-repeat;
+      background-size: contain;
+      display: block;
+      margin-top:-8em;
+      margin-bottom: -4em;
+    }
+
+    .table {
+      z-index: 1;
+      width: 90%;
+      max-width: 75.5em;
+      padding-bottom: 3em;
+      
+      table{
+
+        font-size: .7em;
+        font-weight:600;
+
+        tr {
+
+          border: 1px solid #333;
+
+          &.header {
+            border: none;
+          }
+
+          th {
+            background-color: transparent;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 1em;
+            text-align: center;
+            color: #fff;
+          }
+
+          td {
+            padding: 1em;
+            background-color: #{$tablepink};
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+
+  #download {
+    top: 8.5em;
+    height: 25em;
+
+    &:after{
+    	@include clear-fix();
+    }
+    
+    .text {
+      font-size: 2.75em;
+      line-height: 1.25em;
+      top: 4.75em;
+      position: relative;
+      z-index: 2;
+      width: 46%;
+      float: left;
+      display: block;
+      margin-left: .25em;
+    }
+
+    .buttons {
+      width: 46%;
+      float: left;
+      top: 12em;
+      position: relative;
+      max-width: 390px;
+      margin-left: 3em;
+
+      .talk2.logo {
+        margin: auto;
+        left: 0;
+        right: 0;
+      }
+
+      .download {
+      	float: left;
+      	border: 2px solid #333;
+      	padding: 1em;
+      	display: block;
+      	text-transform: uppercase;
+      	letter-spacing: .1em;
+    		text-decoration: none;
+    		color: #333;
+    		max-width: 24.375em;
+    		width: 100%;
+    		text-align: center;
+        margin-top: 1em;
+      }
+
+      .button {
+      	width: 48%;
+      	float: left;
+      	display: block;
+      	text-indent: -200%;
+      	overflow: hidden;
+      	height: auto;
+      	min-height: 3.15em;
+      	margin: 11% 1%;
+
+      	&.googleplay {
+          background: url(../img/png/BadgeGooglePlay.png) transparent left center no-repeat;
+      		background-size: contain;
+
+      	}
+
+      	&.appstore {
+      		background: url(../img/png/BadgeAppStore.png) right center no-repeat;
+      		background-size: contain;
+      	}
+      }
+    }
+    
+  }
+
+  #social {
+    top: 15.5em;
+    height: 4.25em;
+    background-color: #212121;
+    color: #FFF;
+    padding-top: 1em;
+    text-align: center;
+
+    .centered
+    {
+      margin-top:-.5em;
+    }
+
+    	.text {
+    		text-transform: uppercase;
+    		font-weight: 400;
+    		font-size: .75em;
+    	}
+
+    	.icon {
+    		top: .75em;
+    		position: relative;
+    		width: 30px;
+    		height: 30px;
+    		overflow: hidden;
+    		text-indent: -2000%;
+    		display: inline-block;
+    		background: url(../img/png/social.png) no-repeat;
+
+    		&.fb {
+    			left: 2em;
+    			background-position: .5em top;
+    		}
+
+    		&.twitter {
+    			left: 3em;
+    			background-position: -3.25em top;
+    		}
+    	}
+  }
+
+  #footer {
+    color:#333;
+    top: 17.5em;
+    height: 4.25em;
+    top: 25.5em;
+    height: 3.25em;
+    font-weight: 400;
+    font-size: .75em;
+    text-align: center;
+    line-height: 1.5em;
+    padding-bottom: 2em;
+
+    &:after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2em;
+    }
+
+    a {
+      color:#333;
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (max-width:48.875em) {
+	#container{
+
+	  #features {
+	    
+
+	    .features ul {
+	    	.feature {
+	    		padding: .15em 2em 3em 4.5em;
+	    		font-size: .85em;
+
+	    		&:before{
+	    			width: 3em;
+	    			height: 3em;
+	    			margin-top: 1em;
+	    		}
+
+	    	}
+
+
+	    }
+	  }
+	}
+}
+
+
+@media only screen and (max-width:46.563em) {
+	#container{
+	  #header {
+      height: 6em;
+
+      .talk2.logo {
+        margin: .5em auto 0;
+        width: 25%;
+        background-size: contain;
+        display: block;
+        float: none;
+      }
+
+	  	.menu {
+        margin: 1em auto 0;
+        font-size: .75em;
+        width: 100%;
+        display: block;
+        float: none;
+        text-align: center;
+
+        ul li {
+          margin: 0 2em;
+          text-align: center;
+        }
+	  	}
+	  	
+	  }
+	  #product {
+	  	height: 23em;
+
+	  	&:after{
+      		background: rgba(0,0,0,.7);
+	  	}
+		h1.title , h2{
+	      left: 0;
+	      right: 0;
+	      margin: auto;
+	      text-align: center;
+	    }
+
+      h1.title {
+        font-size: 1.55em;
+        top: 3em;
+        width: 80%;
+      }
+      h2 {
+        font-size: 1em;
+        top: 10em;
+        font-weight: 100;
+        width: 80%;
+
+        &.button {
+          top: 18em;
+
+          .buttons {
+            width: 40%;
+
+            &.googleplay {
+              background: url(../img/png/BadgeGooglePlay.png) transparent left center no-repeat;
+              background-size: contain;
+            }
+
+            &.appstore {
+              background: url(../img/png/BadgeAppStore.png) transparent left center no-repeat;
+              background-size: contain;
+            }
+          }
+
+        }
+
+        
+
+      }
+	  }
+	  #features {
+	    top: -4em;
+      .hero {
+        display: none;
+      }
+	    .features ul {
+        width: 100%;
+        margin: auto;
+        float: none;
+        min-height: 35em;
+
+	    	.feature {
+          width: 100%;
+	    		padding: 0 0 0 5em;
+          background: none;
+	    		font-size: 1em;
+          cursor: default;
+
+          &.phonenum, &.rates {
+            padding-top: 2;
+          }
+
+	    		&:before{
+	    			width: 3em;
+	    			height: 3em;
+	    			margin: 0;
+            top:2;
+	    		}
+
+          &.selected {
+            background: none;
+          }
+	    	}
+	    }
+	  }
+    #packages {
+      top: 0;
+      min-height: 15em;
+
+      h1, h2 {
+        width: 80%;
+      }
+
+      h1.title {
+      font-size: 2.5em;
+      line-height: 1.15em;
+      color: #FFF;
+      padding: 1em 0 1.5em 0.75em;
+      z-index: 2;
+      width: 10em;
+    }
+
+    h2 {
+      font-size: 1em;
+      margin-top:-3em;
+      margin-left:2em;
+    }
+
+
+
+      .hero {
+        width: 20em;
+        height: 30em;
+        background: url(../img/png/PhonePerspective.png) left top no-repeat;
+        background-size: contain;
+        display: block;
+        top:2em;
+        margin-top:-1em;
+        margin-bottom:-15em;
+      }
+
+      .table {
+        font-size: .75em;
+        width: 90%;
+        min-width: 320px;
+        margin: auto;
+        float: none;
+        top: 3em;
+        padding-bottom: 5em;
+      }
+    }
+    #download {
+      top: -7em;
+
+      .text, .buttons {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        float: none;
+      }
+
+      .text {
+        font-size: 1.5em;
+        top: 8em;
+      }
+
+      .buttons {
+        margin-top: 3em;
+
+        .talk2.logo {
+          width: 40%;
+          height: 4em;
+          background-size: contain;
+          margin-bottom: 1em;
+        }
+      }
+    }
+    #social {
+      top: 5em;
+
+      .center {
+
+        margin-top: -.25em;
+      }
+
+      .icon {
+        &.twitter , &.fb{
+          left: .5em;
+        }
+      }
+    }
+    #footer {
+      top: 10em;
+    }
+	}
+
+  .tnc-modal {
+    .close {
+      right: 1em;
+      top: 1em;
+    }
+  }
+}
+
+.tnc-modal {
+  z-index: 11;
+  width: 90vw;
+  height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  left:0;
+  right: 0;
+  top: 10%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 2em;
+  display: none;
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
+
+  .close {
+    background: url(../img/svg/close.svg) top center no-repeat;
+    background-size: contain;
+    height: 2em;
+    width: 2em;
+    display: block;
+    margin-left: 80%;
+    position: fixed;
+    text-indent: -200%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
+.tnclink {
+    cursor: pointer;
+}

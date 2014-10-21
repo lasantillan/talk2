@@ -1,0 +1,883 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+/*= RESET
+ --------------------------------------- 
+ *  
+ * Reset by Meyer ( http://meyerweb.com/eric/tools/css/reset/ )
+ * v2.0 | 20110126
+ * License: none (public domain)
+ * 
+ * Modified, added other commonly-used rules
+ * 
+ */
+/* line 24, ../sass/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 34, ../sass/base/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 38, ../sass/base/_reset.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1; }
+
+/* line 47, ../sass/base/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 51, ../sass/base/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 56, ../sass/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 61, ../sass/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 66, ../sass/base/_reset.scss */
+button, a, input, textarea {
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+  margin: 0; }
+
+/* line 72, ../sass/base/_reset.scss */
+button, input[type="submit"] {
+  cursor: pointer;
+  font-size: 16px; }
+
+/* line 77, ../sass/base/_reset.scss */
+input[type=submit] {
+  -webkit-appearance: none; }
+
+/* line 83, ../sass/base/_reset.scss */
+input,
+textarea,
+select {
+  font-size: 1em; }
+
+/* line 87, ../sass/base/_reset.scss */
+video {
+  width: 100%;
+  height: auto; }
+
+/* line 92, ../sass/base/_reset.scss */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* line 97, ../sass/base/_reset.scss */
+em {
+  font-style: italic; }
+
+/* MIXINS */
+/* line 9, ../sass/base/_general.scss */
+body, html {
+  overflow-x: hidden; }
+
+/* STYLES */
+/* line 14, ../sass/base/_general.scss */
+#container {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  position: relative; }
+  /* line 20, ../sass/base/_general.scss */
+  #container .centered {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: block;
+    position: relative; }
+  /* line 30, ../sass/base/_general.scss */
+  #container .section {
+    width: 100%;
+    display: block;
+    /* max-width: 900px; */
+    position: relative;
+    /* margin: auto;
+    left: 0;
+    right: 0; */ }
+  /* line 40, ../sass/base/_general.scss */
+  #container .talk2.logo {
+    background: url(../img/svg/Talk2Logo.svg) center top no-repeat;
+    background-size: cover;
+    display: block;
+    width: 8.25em;
+    height: 3.65em;
+    text-indent: -100%;
+    overflow: hidden; }
+  /* line 50, ../sass/base/_general.scss */
+  #container .talk2.logo2 {
+    background: url(../img/svg/Talk2Logo.svg) center top no-repeat;
+    background-size: cover;
+    display: block;
+    width: 11.25em;
+    height: 4.65em;
+    text-indent: -100%;
+    overflow: hidden;
+    float: left;
+    margin: -.25em 5em;
+    margin-left: 5.75em; }
+  /* line 67, ../sass/base/_general.scss */
+  #container #header {
+    height: 5.5em;
+    position: relative;
+    background-color: #FFF;
+    z-index: 10; }
+    /* line 74, ../sass/base/_general.scss */
+    #container #header .talk2.logo {
+      float: left;
+      margin: 1.25em 5em; }
+    /* line 79, ../sass/base/_general.scss */
+    #container #header .menu {
+      float: right;
+      margin: 2.25em 10% 0 0; }
+      /* line 83, ../sass/base/_general.scss */
+      #container #header .menu ul {
+        display: inline-block; }
+        /* line 86, ../sass/base/_general.scss */
+        #container #header .menu ul li {
+          display: inline-block;
+          margin-right: 4em;
+          font-size: .89em;
+          text-transform: uppercase;
+          font-weight: 600; }
+          /* line 93, ../sass/base/_general.scss */
+          #container #header .menu ul li a {
+            text-decoration: none;
+            color: #000; }
+    /* line 101, ../sass/base/_general.scss */
+    #container #header:after {
+      clear: both;
+      float: none; }
+  /* line 106, ../sass/base/_general.scss */
+  #container #product {
+    height: 41.125em;
+    border-bottom: 3px solid #616161;
+    background: url(../img/png/ImageWoman.png) left top no-repeat;
+    background-size: cover; }
+    /* line 113, ../sass/base/_general.scss */
+    #container #product h1.title {
+      font-size: 2.5em;
+      line-height: 1.15em;
+      color: #FFF;
+      top: 3em;
+      right: 10%;
+      position: absolute;
+      z-index: 2;
+      width: 10em; }
+    /* line 124, ../sass/base/_general.scss */
+    #container #product h2 {
+      font-size: 1.5em;
+      line-height: 1.35em;
+      color: #FFF;
+      width: 18em;
+      top: 10em;
+      right: 7%;
+      position: absolute;
+      z-index: 2; }
+      /* line 134, ../sass/base/_general.scss */
+      #container #product h2.buttons {
+        top: 14em; }
+        /* line 136, ../sass/base/_general.scss */
+        #container #product h2.buttons .button {
+          width: 40%;
+          float: left;
+          display: block;
+          text-indent: -200%;
+          overflow: hidden;
+          height: auto;
+          min-height: 3em;
+          margin: 10% 1%;
+          background-color: transparent;
+          border-radius: 10px;
+          -webkit-border-radius: 10px; }
+          /* line 149, ../sass/base/_general.scss */
+          #container #product h2.buttons .button.googleplay {
+            background: url(../img/png/BadgeGooglePlay.png) transparent left center no-repeat;
+            background-size: contain; }
+          /* line 154, ../sass/base/_general.scss */
+          #container #product h2.buttons .button.appstore {
+            background: url(../img/png/BadgeAppStore.png) transparent left center no-repeat;
+            background-size: contain;
+            margin-left: 10%; }
+    /* line 163, ../sass/base/_general.scss */
+    #container #product:after {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0; }
+  /* line 175, ../sass/base/_general.scss */
+  #container #features {
+    padding-top: 5.5em; }
+    /* line 179, ../sass/base/_general.scss */
+    #container #features .hero {
+      width: 50%;
+      height: 100%;
+      min-height: 45em;
+      background-size: contain;
+      display: block;
+      float: right;
+      background: url(../img/png/Phone1.png) left top no-repeat; }
+    /* line 190, ../sass/base/_general.scss */
+    #container #features .features ul {
+      width: 50%;
+      max-width: 46.375em;
+      display: block;
+      height: auto;
+      min-height: 35em; }
+      /* line 197, ../sass/base/_general.scss */
+      #container #features .features ul .feature {
+        float: left;
+        height: auto;
+        min-height: 9em;
+        width: 100%;
+        margin: 1.5em 0 12 2em;
+        background: url(../img/svg/OutlineGray.svg) left top no-repeat;
+        background-size: 100% 100%;
+        display: block;
+        padding: 3.5em 4em 3.5em 5.75em;
+        position: relative;
+        cursor: pointer; }
+        /* line 210, ../sass/base/_general.scss */
+        #container #features .features ul .feature.phonenum {
+          padding-top: 3.25em; }
+        /* line 214, ../sass/base/_general.scss */
+        #container #features .features ul .feature.philprice {
+          padding-top: 3.25em; }
+        /* line 218, ../sass/base/_general.scss */
+        #container #features .features ul .feature.freesms {
+          padding-top: 4em; }
+        /* line 222, ../sass/base/_general.scss */
+        #container #features .features ul .feature.rates {
+          padding-top: 3.25em; }
+        /* line 226, ../sass/base/_general.scss */
+        #container #features .features ul .feature:before {
+          display: block;
+          content: " ";
+          width: 4.5em;
+          height: 4.5em;
+          left: .5em;
+          margin: 0 .5em;
+          top: 3em;
+          position: absolute; }
+        /* line 237, ../sass/base/_general.scss */
+        #container #features .features ul .feature.phonenum:before {
+          background: url(../img/svg/IconPhone.svg) left top no-repeat;
+          background-size: cover; }
+        /* line 242, ../sass/base/_general.scss */
+        #container #features .features ul .feature.philprice:before {
+          background: url(../img/svg/IconPeso.svg) left top no-repeat;
+          background-size: cover; }
+        /* line 247, ../sass/base/_general.scss */
+        #container #features .features ul .feature.freesms:before {
+          background: url(../img/svg/IconMessage.svg) left top no-repeat;
+          background-size: cover;
+          top: 4em; }
+        /* line 253, ../sass/base/_general.scss */
+        #container #features .features ul .feature.rates:before {
+          background: url(../img/svg/IconCall.svg) left top no-repeat;
+          background-size: cover;
+          top: 2.5em; }
+        /* line 260, ../sass/base/_general.scss */
+        #container #features .features ul .feature span {
+          font-size: .80em;
+          font-weight: 300;
+          display: block;
+          padding-top: .25em; }
+        /* line 267, ../sass/base/_general.scss */
+        #container #features .features ul .feature p {
+          font-size: 1em;
+          font-weight: 600;
+          display: block; }
+        /* line 273, ../sass/base/_general.scss */
+        #container #features .features ul .feature.selected {
+          background: url(../img/svg/OutlineRed.svg) left top no-repeat;
+          background-size: 100% 100%; }
+          /* line 277, ../sass/base/_general.scss */
+          #container #features .features ul .feature.selected:after {
+            clear: both;
+            float: none; }
+  /* line 293, ../sass/base/_general.scss */
+  #container #packages {
+    top: 15em;
+    background-color: #d93029;
+    min-height: 25em; }
+    /* line 298, ../sass/base/_general.scss */
+    #container #packages h1.title {
+      font-size: 3.5em;
+      line-height: 1.15em;
+      color: #FFF;
+      padding: 1em 0 .5em 1.75em;
+      z-index: 2;
+      width: 10em;
+      font-weight: 600; }
+    /* line 308, ../sass/base/_general.scss */
+    #container #packages h2 {
+      font-size: 1.25em;
+      line-height: 1.35em;
+      color: #FFF;
+      width: 20em;
+      margin: -1em 0 1.5em 5.05em;
+      z-index: 2; }
+    /* line 318, ../sass/base/_general.scss */
+    #container #packages .hero {
+      width: 44.125em;
+      height: 33.75em;
+      background: url(../img/png/PhonePerspective.png) left top no-repeat;
+      background-size: contain;
+      display: block;
+      margin-top: -8em;
+      margin-bottom: -4em; }
+    /* line 328, ../sass/base/_general.scss */
+    #container #packages .table {
+      z-index: 1;
+      width: 90%;
+      max-width: 75.5em;
+      padding-bottom: 3em; }
+      /* line 334, ../sass/base/_general.scss */
+      #container #packages .table table {
+        font-size: .7em;
+        font-weight: 600; }
+        /* line 339, ../sass/base/_general.scss */
+        #container #packages .table table tr {
+          border: 1px solid #333; }
+          /* line 343, ../sass/base/_general.scss */
+          #container #packages .table table tr.header {
+            border: none; }
+          /* line 347, ../sass/base/_general.scss */
+          #container #packages .table table tr th {
+            background-color: transparent;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 1em;
+            text-align: center;
+            color: #fff; }
+          /* line 356, ../sass/base/_general.scss */
+          #container #packages .table table tr td {
+            padding: 1em;
+            background-color: #eea29e;
+            text-align: center; }
+  /* line 367, ../sass/base/_general.scss */
+  #container #download {
+    top: 8.5em;
+    height: 25em; }
+    /* line 371, ../sass/base/_general.scss */
+    #container #download:after {
+      clear: both;
+      float: none; }
+    /* line 375, ../sass/base/_general.scss */
+    #container #download .text {
+      font-size: 2.75em;
+      line-height: 1.25em;
+      top: 4.75em;
+      position: relative;
+      z-index: 2;
+      width: 46%;
+      float: left;
+      display: block;
+      margin-left: .25em; }
+    /* line 387, ../sass/base/_general.scss */
+    #container #download .buttons {
+      width: 46%;
+      float: left;
+      top: 12em;
+      position: relative;
+      max-width: 390px;
+      margin-left: 3em; }
+      /* line 395, ../sass/base/_general.scss */
+      #container #download .buttons .talk2.logo {
+        margin: auto;
+        left: 0;
+        right: 0; }
+      /* line 401, ../sass/base/_general.scss */
+      #container #download .buttons .download {
+        float: left;
+        border: 2px solid #333;
+        padding: 1em;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        text-decoration: none;
+        color: #333;
+        max-width: 24.375em;
+        width: 100%;
+        text-align: center;
+        margin-top: 1em; }
+      /* line 416, ../sass/base/_general.scss */
+      #container #download .buttons .button {
+        width: 48%;
+        float: left;
+        display: block;
+        text-indent: -200%;
+        overflow: hidden;
+        height: auto;
+        min-height: 3.15em;
+        margin: 11% 1%; }
+        /* line 426, ../sass/base/_general.scss */
+        #container #download .buttons .button.googleplay {
+          background: url(../img/png/BadgeGooglePlay.png) transparent left center no-repeat;
+          background-size: contain; }
+        /* line 432, ../sass/base/_general.scss */
+        #container #download .buttons .button.appstore {
+          background: url(../img/png/BadgeAppStore.png) right center no-repeat;
+          background-size: contain; }
+  /* line 441, ../sass/base/_general.scss */
+  #container #social {
+    top: 15.5em;
+    height: 4.25em;
+    background-color: #212121;
+    color: #FFF;
+    padding-top: 1em;
+    text-align: center; }
+    /* line 450, ../sass/base/_general.scss */
+    #container #social .centered {
+      margin-top: -.5em; }
+    /* line 454, ../sass/base/_general.scss */
+    #container #social .text {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: .75em; }
+    /* line 460, ../sass/base/_general.scss */
+    #container #social .icon {
+      top: .75em;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      text-indent: -2000%;
+      display: inline-block;
+      background: url(../img/png/social.png) no-repeat; }
+      /* line 470, ../sass/base/_general.scss */
+      #container #social .icon.fb {
+        left: 2em;
+        background-position: .5em top; }
+      /* line 475, ../sass/base/_general.scss */
+      #container #social .icon.twitter {
+        left: 3em;
+        background-position: -3.25em top; }
+  /* line 482, ../sass/base/_general.scss */
+  #container #footer {
+    color: #333;
+    top: 17.5em;
+    height: 4.25em;
+    top: 25.5em;
+    height: 3.25em;
+    font-weight: 400;
+    font-size: .75em;
+    text-align: center;
+    line-height: 1.5em;
+    padding-bottom: 2em; }
+    /* line 494, ../sass/base/_general.scss */
+    #container #footer:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2em; }
+    /* line 501, ../sass/base/_general.scss */
+    #container #footer a {
+      color: #333;
+      text-decoration: none; }
+
+@media only screen and (max-width: 48.875em) {
+  /* line 515, ../sass/base/_general.scss */
+  #container #features .features ul .feature {
+    padding: .15em 2em 3em 4.5em;
+    font-size: .85em; }
+    /* line 519, ../sass/base/_general.scss */
+    #container #features .features ul .feature:before {
+      width: 3em;
+      height: 3em;
+      margin-top: 1em; } }
+@media only screen and (max-width: 46.563em) {
+  /* line 536, ../sass/base/_general.scss */
+  #container #header {
+    height: 6em; }
+    /* line 539, ../sass/base/_general.scss */
+    #container #header .talk2.logo {
+      margin: .5em auto 0;
+      width: 25%;
+      background-size: contain;
+      display: block;
+      float: none; }
+    /* line 547, ../sass/base/_general.scss */
+    #container #header .menu {
+      margin: 1em auto 0;
+      font-size: .75em;
+      width: 100%;
+      display: block;
+      float: none;
+      text-align: center; }
+      /* line 555, ../sass/base/_general.scss */
+      #container #header .menu ul li {
+        margin: 0 2em;
+        text-align: center; }
+  /* line 562, ../sass/base/_general.scss */
+  #container #product {
+    height: 23em; }
+    /* line 565, ../sass/base/_general.scss */
+    #container #product:after {
+      background: rgba(0, 0, 0, 0.7); }
+    /* line 568, ../sass/base/_general.scss */
+    #container #product h1.title, #container #product h2 {
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center; }
+    /* line 575, ../sass/base/_general.scss */
+    #container #product h1.title {
+      font-size: 1.55em;
+      top: 3em;
+      width: 80%; }
+    /* line 580, ../sass/base/_general.scss */
+    #container #product h2 {
+      font-size: 1em;
+      top: 10em;
+      font-weight: 100;
+      width: 80%; }
+      /* line 586, ../sass/base/_general.scss */
+      #container #product h2.button {
+        top: 18em; }
+        /* line 589, ../sass/base/_general.scss */
+        #container #product h2.button .buttons {
+          width: 40%; }
+          /* line 592, ../sass/base/_general.scss */
+          #container #product h2.button .buttons.googleplay {
+            background: url(../img/png/BadgeGooglePlay.png) transparent left center no-repeat;
+            background-size: contain; }
+          /* line 597, ../sass/base/_general.scss */
+          #container #product h2.button .buttons.appstore {
+            background: url(../img/png/BadgeAppStore.png) transparent left center no-repeat;
+            background-size: contain; }
+  /* line 609, ../sass/base/_general.scss */
+  #container #features {
+    top: -4em; }
+    /* line 611, ../sass/base/_general.scss */
+    #container #features .hero {
+      display: none; }
+    /* line 614, ../sass/base/_general.scss */
+    #container #features .features ul {
+      width: 100%;
+      margin: auto;
+      float: none;
+      min-height: 35em; }
+      /* line 620, ../sass/base/_general.scss */
+      #container #features .features ul .feature {
+        width: 100%;
+        padding: 0 0 0 5em;
+        background: none;
+        font-size: 1em;
+        cursor: default; }
+        /* line 627, ../sass/base/_general.scss */
+        #container #features .features ul .feature.phonenum, #container #features .features ul .feature.rates {
+          padding-top: 2; }
+        /* line 631, ../sass/base/_general.scss */
+        #container #features .features ul .feature:before {
+          width: 3em;
+          height: 3em;
+          margin: 0;
+          top: 2; }
+        /* line 638, ../sass/base/_general.scss */
+        #container #features .features ul .feature.selected {
+          background: none; }
+  /* line 644, ../sass/base/_general.scss */
+  #container #packages {
+    top: 0;
+    min-height: 15em; }
+    /* line 648, ../sass/base/_general.scss */
+    #container #packages h1, #container #packages h2 {
+      width: 80%; }
+    /* line 652, ../sass/base/_general.scss */
+    #container #packages h1.title {
+      font-size: 2.5em;
+      line-height: 1.15em;
+      color: #FFF;
+      padding: 1em 0 1.5em 0.75em;
+      z-index: 2;
+      width: 10em; }
+    /* line 661, ../sass/base/_general.scss */
+    #container #packages h2 {
+      font-size: 1em;
+      margin-top: -3em;
+      margin-left: 2em; }
+    /* line 669, ../sass/base/_general.scss */
+    #container #packages .hero {
+      width: 20em;
+      height: 30em;
+      background: url(../img/png/PhonePerspective.png) left top no-repeat;
+      background-size: contain;
+      display: block;
+      top: 2em;
+      margin-top: -1em;
+      margin-bottom: -15em; }
+    /* line 680, ../sass/base/_general.scss */
+    #container #packages .table {
+      font-size: .75em;
+      width: 90%;
+      min-width: 320px;
+      margin: auto;
+      float: none;
+      top: 3em;
+      padding-bottom: 5em; }
+  /* line 690, ../sass/base/_general.scss */
+  #container #download {
+    top: -7em; }
+    /* line 693, ../sass/base/_general.scss */
+    #container #download .text, #container #download .buttons {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      float: none; }
+    /* line 700, ../sass/base/_general.scss */
+    #container #download .text {
+      font-size: 1.5em;
+      top: 8em; }
+    /* line 705, ../sass/base/_general.scss */
+    #container #download .buttons {
+      margin-top: 3em; }
+      /* line 708, ../sass/base/_general.scss */
+      #container #download .buttons .talk2.logo {
+        width: 40%;
+        height: 4em;
+        background-size: contain;
+        margin-bottom: 1em; }
+  /* line 716, ../sass/base/_general.scss */
+  #container #social {
+    top: 5em; }
+    /* line 719, ../sass/base/_general.scss */
+    #container #social .center {
+      margin-top: -.25em; }
+    /* line 725, ../sass/base/_general.scss */
+    #container #social .icon.twitter, #container #social .icon.fb {
+      left: .5em; }
+  /* line 730, ../sass/base/_general.scss */
+  #container #footer {
+    top: 10em; }
+
+  /* line 736, ../sass/base/_general.scss */
+  .tnc-modal .close {
+    right: 1em;
+    top: 1em; } }
+/* line 743, ../sass/base/_general.scss */
+.tnc-modal {
+  z-index: 11;
+  width: 90vw;
+  height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 2em;
+  display: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25); }
+  /* line 762, ../sass/base/_general.scss */
+  .tnc-modal .close {
+    background: url(../img/svg/close.svg) top center no-repeat;
+    background-size: contain;
+    height: 2em;
+    width: 2em;
+    display: block;
+    margin-left: 80%;
+    position: fixed;
+    text-indent: -200%;
+    overflow: hidden;
+    cursor: pointer; }
+
+/* line 775, ../sass/base/_general.scss */
+.tnclink {
+  cursor: pointer; }
+
+/* line 293, ../sass/vendors/foundation/components/_global.scss */
+meta.foundation-mq-small {
+  font-family: "/only screen and (max-width: 40em)/";
+  width: 0em; }
+
+/* line 298, ../sass/vendors/foundation/components/_global.scss */
+meta.foundation-mq-medium {
+  font-family: "/only screen and (min-width:40.063em)/";
+  width: 40.063em; }
+
+/* line 303, ../sass/vendors/foundation/components/_global.scss */
+meta.foundation-mq-large {
+  font-family: "/only screen and (min-width:64.063em)/";
+  width: 64.063em; }
+
+/* line 308, ../sass/vendors/foundation/components/_global.scss */
+meta.foundation-mq-xlarge {
+  font-family: "/only screen and (min-width:90.063em)/";
+  width: 90.063em; }
+
+/* line 313, ../sass/vendors/foundation/components/_global.scss */
+meta.foundation-mq-xxlarge {
+  font-family: "/only screen and (min-width:120.063em)/";
+  width: 120.063em; }
+
+/* line 323, ../sass/vendors/foundation/components/_global.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 328, ../sass/vendors/foundation/components/_global.scss */
+html,
+body {
+  font-size: 100%; }
+
+/* line 331, ../sass/vendors/foundation/components/_global.scss */
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default; }
+
+/* line 344, ../sass/vendors/foundation/components/_global.scss */
+a:hover {
+  cursor: pointer; }
+
+/* line 349, ../sass/vendors/foundation/components/_global.scss */
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto; }
+
+/* line 352, ../sass/vendors/foundation/components/_global.scss */
+object,
+embed {
+  height: 100%; }
+
+/* line 353, ../sass/vendors/foundation/components/_global.scss */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/* line 359, ../sass/vendors/foundation/components/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+/* line 364, ../sass/vendors/foundation/components/_global.scss */
+.left {
+  float: left !important; }
+
+/* line 365, ../sass/vendors/foundation/components/_global.scss */
+.right {
+  float: right !important; }
+
+/* line 366, ../sass/vendors/foundation/components/_global.scss */
+.clearfix {
+  *zoom: 1; }
+  /* line 159, ../sass/vendors/foundation/components/_global.scss */
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  /* line 160, ../sass/vendors/foundation/components/_global.scss */
+  .clearfix:after {
+    clear: both; }
+
+/* line 367, ../sass/vendors/foundation/components/_global.scss */
+.text-left {
+  text-align: left !important; }
+
+/* line 368, ../sass/vendors/foundation/components/_global.scss */
+.text-right {
+  text-align: right !important; }
+
+/* line 369, ../sass/vendors/foundation/components/_global.scss */
+.text-center {
+  text-align: center !important; }
+
+/* line 370, ../sass/vendors/foundation/components/_global.scss */
+.text-justify {
+  text-align: justify !important; }
+
+/* line 371, ../sass/vendors/foundation/components/_global.scss */
+.hide {
+  display: none; }
+
+/* line 373, ../sass/vendors/foundation/components/_global.scss */
+.start {
+  float: left !important; }
+
+/* line 374, ../sass/vendors/foundation/components/_global.scss */
+.end {
+  float: right !important; }
+
+/* line 375, ../sass/vendors/foundation/components/_global.scss */
+.text-start {
+  text-align: left !important; }
+
+/* line 376, ../sass/vendors/foundation/components/_global.scss */
+.text-end {
+  text-align: right !important; }
+
+/* line 382, ../sass/vendors/foundation/components/_global.scss */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 385, ../sass/vendors/foundation/components/_global.scss */
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* line 395, ../sass/vendors/foundation/components/_global.scss */
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+/* line 398, ../sass/vendors/foundation/components/_global.scss */
+select {
+  width: 100%; }

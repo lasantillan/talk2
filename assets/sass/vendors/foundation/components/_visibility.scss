@@ -432,238 +432,16 @@ $include-html-visibility-classes: $include-html-classes !default;
       &.show-for-xlarge-up,
       &.show-for-xlarge-only,
       &.hide-for-xxlarge-up,
-      &.hide-for-xxlarge-only { display: table-row-group !important; }
-    }
-    tr {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-large-only,
-      &.show-for-xlarge,
-      &.show-for-xlarge-up,
-      &.show-for-xlarge-only,
-      &.hide-for-xxlarge-up,
-      &.hide-for-xxlarge-only { display: table-row !important; }
-    }
-    td,
-    th {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-large-only,
-      &.show-for-xlarge,
-      &.show-for-xlarge-up,
-      &.show-for-xlarge-only,
-      &.hide-for-xxlarge-up,
-      &.hide-for-xxlarge-only { display: table-cell !important; }
-    }
-  }
-
-  /* XX-Large Displays: 1920 and up */
-  @media #{$xxlarge-up} {
-    .hide-for-small,
-    .hide-for-small-only,
-    .hide-for-medium,
-    .hide-for-medium-down,
-    .hide-for-medium-only,
-    .show-for-medium-up,
-    .show-for-large-up,
-    .hide-for-large-only,
-    .hide-for-xlarge-only,
-    .show-for-xlarge-up,
-    .show-for-xxlarge-up,
-    .show-for-xxlarge-only { display: inherit !important; }
-
-    .show-for-small-only,
-    .show-for-medium,
-    .show-for-medium-down,
-    .show-for-medium-only,
-    .show-for-large,
-    .show-for-large-only,
-    .show-for-large-down,
-    .hide-for-xlarge,
-    .show-for-xlarge-only,
-    .hide-for-xxlarge-up,
-    .hide-for-xxlarge-only { display: none !important; }
-
-    /* Specific visibility for tables */
-    table {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-xlarge-only,
-      &.show-for-xlarge-up,
-      &.show-for-xxlarge-up,
-      &.show-for-xxlarge-only { display: table; }
-    }
-    thead {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-xlarge-only,
-      &.show-for-xlarge-up,
-      &.show-for-xxlarge-up,
-      &.show-for-xxlarge-only { display: table-header-group !important; }
-    }
-    tbody {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-xlarge-only,
-      &.show-for-xlarge-up,
-      &.show-for-xxlarge-up,
-      &.show-for-xxlarge-only { display: table-row-group !important; }
-    }
-    tr {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-xlarge-only,
-      &.show-for-xlarge-up,
-      &.show-for-xxlarge-up,
-      &.show-for-xxlarge-only { display: table-row !important; }
-    }
-    td,
-    th {
-      &.hide-for-small,
-      &.hide-for-small-only,
-      &.hide-for-medium,
-      &.hide-for-medium-down,
-      &.hide-for-medium-only,
-      &.show-for-medium-up,
-      &.show-for-large-up,
-      &.hide-for-xlarge-only,
-      &.show-for-xlarge-up,
-      &.show-for-xxlarge-up,
-      &.show-for-xxlarge-only { display: table-cell !important; }
-    }
-  }
-
-
-  /* Orientation targeting */
-  .show-for-landscape,
-  .hide-for-portrait { display: inherit !important; }
-  .hide-for-landscape,
-  .show-for-portrait { display: none !important; }
-
-  /* Specific visibility for tables */
-  table {
-    &.hide-for-landscape,
-    &.show-for-portrait { display: table; }
-  }
-  thead {
-    &.hide-for-landscape,
-    &.show-for-portrait { display: table-header-group !important; }
-  }
-  tbody {
-    &.hide-for-landscape,
-    &.show-for-portrait { display: table-row-group !important; }
-  }
-  tr {
-    &.hide-for-landscape,
-    &.show-for-portrait { display: table-row !important; }
-  }
-  td,
-  th {
-    &.hide-for-landscape,
-    &.show-for-portrait { display: table-cell !important; }
-  }
-
-  @media #{$landscape} {
-    .show-for-landscape,
-    .hide-for-portrait { display: inherit !important; }
-    .hide-for-landscape,
-    .show-for-portrait { display: none !important; }
-
-    /* Specific visibility for tables */
-    table {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table; }
-    }
-    thead {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-cell !important; }
-    }
-  }
-
-  @media #{$portrait} {
-    .show-for-portrait,
-    .hide-for-landscape { display: inherit !important; }
-    .hide-for-portrait,
-    .show-for-landscape { display: none !important; }
-
-    /* Specific visibility for tables */
-    table {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table; }
-    }
-    thead {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-cell !important; }
-    }
-  }
-
-  /* Touch-enabled device targeting */
-  .show-for-touch { display: none !important; }
-  .hide-for-touch { display: inherit !important; }
-  .touch .show-for-touch { display: inherit !important; }
-  .touch .hide-for-touch { display: none !important; }
-
-  /* Specific visibility for tables */
-  table.hide-for-touch { display: table; }
-  .touch table.show-for-touch { display: table; }
-  thead.hide-for-touch { display: table-header-group !important; }
-  .touch thead.show-for-touch { display: table-header-group !important; }
+      &.hide-for-xxlarge-only { display: table-row-group !importanf3fí×õ¦÷ªÕ»öïÓ¦LT7OÒÿ*¤ü¿¢Òî'áDo\)ÕÎşÿ]Áåz÷/t¯şÖkî§ÈQıÑûuZÛKûoÎïpãÿş²×»ªğåWö4ñø?|õ¿«¿Íñ÷­[şÇ×“Ÿğ Põÿë¾ÊÊàÿb øfáûN¾~5oˆz`¹ø
+®_÷¸ÿşÏõÿà¿'4ü¾Hüõˆªû•ğÕïñŸÿu%ù½[ªUû-º[uM¿n/ï=ùjíö_ıŒ¿şÏÿû=ô]-»/§O×‹Ü_Û®ÿŠÚİèËÀ‚;ÆÆw[Ì\,DÕ6Gıï^éûíz^+¨‚ıTõ¥ö¿ù×Ò¯ï¹út-×Ç|ğÛ¯{NXşH¬§Úÿå¸®G©3×Oo={}}ïıÿJ¿ÖêUö:¼˜¿Å/·4üŒÜ÷×_¿ïß¯Wİø¶ş¨ÃÙk_ôÚáÇŞ¿>ù+şQU«vm‘H®7úâúò—s÷ûuË¯ß'n¯zhÿ~UoÒÿjéÿÕÿ¿ŞÿKÅúİ2ı§zôÿöá½/¦®e(|û}=Ì­ÿ8ªWÜ¾ş=…¿ÿ-ş×¸íÍ'§½±ú^_c¸ØMè)ãòûëº÷_[ışüi*ïrßßõ¾:úS´ÁÃË´º¨ÖÕºÿïû1T~ñ§‘r_B“®ÒP²¿¢½ä7(oıKH½×¯fffÎ?|ªf¹ë¯Ëıû>`MW!¤j ‹Ö4úÈ{¥—]¯ÿ­ù>¿ğé¿&¾Ş[~ú
+ñbæ/x?î×í)9Ï¯NñÿsçÿSvğÓ›ß5?ÆºåUsuü[Ê¶şïÖĞ/}õ~×êÔÿê×¸x…«/?ùßoéh=5mÍ:üPÿÿı÷æï¾V¼•ÿå·ôß­ÿÚï¿?Òïä²~UTÿ#…êıSÿ¾Òê_üÿ7ÆÿëËıw÷î¾»ßCÙúÏø	Z·‡ö'Î÷¾ğàûºtÙ]¯Şÿ|÷è#¦?8Àú?ÿÿ~µ^×zÔëTÅe‡%ıÿ»ÿßÏ÷Wr­:é^µÕÿDùúWXÿ~ÿû×õŸ¾{°±ÕëÅÿ÷9¬õÕ·³÷ÿæùÎ×?féİêTyzáeãïê±~½Uÿÿ¤ûûWW_U?wïÏ!êíÚû}k}êC­kı}å¯é­¥ÃşeQà\Ÿ¡S›ôİ»àûg‡1YŸ2Û8è®7õ×ëÃîÿü×ı¯·ë«úxƒŞµ{Ğ~õû^Ò~×³“ú:á×ñk^ı?2­ÿà¤ù××ág>çÆ=İé«î_—Ôõÿ®}ÿGj}éã«ŞWzTñ¯“Ÿú_•BçÿÎ-ü¿÷äÿü#°¥_^ôÅN¥kİÿçûókSW^NøáF#ßŠùëš»z¶ôw€>ÿÿá¿şşfgvn…u;Çşñë¥†Õ 6A·´ªï±ÿ«UõE¡>oí¿ãÿÿ¥ÿÿş÷'×ÿ8âÿ~…×áşÿãôò®7ÖşV‡r'^¡~,Ør½±Y÷Øîfóÿ|øòŸı>®LëkìGûÿş®Òû_Ôeá—xè5óüsxÂ¿àáî©ôWiüïö“•Şÿÿÿş÷^Û¿ÔÃk¯k?h³Îßólÿr»ìüçZ…Õş«6¡¯Sö'õ×îûßWÔİñ×ÿÃş~C·W‰º´‹ÿõøıÕëá`ıjV˜¶zíÓÔuğunvæJë>ôZ×ürn?=ÿk£G}ñ!…@ï}5‡”ÿ ¿Xßc¡ß¹+lıIÒ1¿=ãmµ³'ô·¦¼~ıöûí—Ô/á¿}Ÿü¯ıj~7—nhÚùĞuÜ}íğ¢ÿ]»ôã×ˆ¶¯Ê{ğ÷ã½š£.$ñh”.§ğÃúãWùKêgbız]ş}ÿ¡6£ËN ÔE÷ş~ñµÒw}}†è¿I­ÿ¿ëş¸_Õƒæ2_7´ä_–\¿®*ëÄçËVúÖõæƒëD¸$ğõÖ2~ïÿ÷+y¯şßKıùãÚN'¼òd|õR)ÿÂ¥¡wİÛ÷Úš¢wÈáÏ*ù]rßÿîıOeÿ<néé£÷®¾Fÿow¯w±.µ~>øÿo±ÿîè»~ÿ{•ïvdfê=n_Kìï8÷Í¥jÿp}ÊÿÿÓx¿n¬ÊVÕÓÂ¾_ï¶ı{•4.şï!^yäÕ—ÅMí&h÷Z/©û«_—“§ÿu<öŸ²şÚ±xuĞe»oûå¿`^ïİâoé_ \ì9ŞGïO_lİ!RüÛcÖÇûGY_ë]~Ÿ¯WëºÿÿöÔßêóW•şïß§Wş:6Òs¿KşÔ÷—¾†°ü+Õà×Ç*¸_:îÿC÷û®îKT|=hÕÿü™Ï•®8¥U¼åÿ¾éò÷ß4¯î×Pwİ§oúæñiŸh(:|_ãî¯œJ}múëÿ ûÕ@»é×[dóO³\;Ü~Õ[û:ÿYoÂ|Á{¬ÿÕçû§6P®·Ö}š^¯ûïfÏİnjÂŞ“RÃ•ÛŸï¢tıÿ×oşÛtë_Âçcû‘~ı|]î·Ï‹õx°®î×Ì$}çó+,Vÿ}Ç×¿k¹İYOë¢:_e-o£¿B‹î¿6{ıïaÔ[—Î9”NÂ¯ü}÷ÖĞÌïÊw<ü«ğøş´Dw_tæ}Ó'¾óûmu#µîıüÖô¤øïtÅ_×âò{·$_ãüß/–ÿ2m}¿dÿêùØÖéÒş­õU¯ç®ê·úÇ¯^~}\•ßÔ¿—IÕ¥¼ôïvšò¿­løşm——ªó=ÕïÁş{ùH[o|Lˆffbî~ÿ×Ïúô]ûç­Süß²öƒóº|¼ğªßfuï®Úßëû«_ÿíûŞİôò§ƒ¸>vå÷kŸw^ê‚Ñ»ÿZ8İw­ş'÷ë_ûëûšÚ^ÕË²íë+°~õañ¯ü_~­ÿßßş¿ëÒÿ•ÿmŸp/ãòûîæ~Â·Ü÷½ìmı'/o¶<¯«>ëı?­Ï<õká]ü­ÉÂ«§]Ÿv±ùúæNïÖt÷éß­¿½®Ô“õÆVÁv¤ˆùûîWê]=Lüÿ
+Õ¿—¸÷õ¥±}u“é{¥Ç†l§3:MğÕÌÛÿÆTúyû¿hIç!¤u]ëïöÿîïûÿ¿ïßÿUı»Ë®Wù:ö
+«Ì÷¥ÿwj¾ıj?%ôëåÁşO®Õ¹T¯E¿ïu©…÷ª|bÖ¾oHÖ]Ñ_ï^›ò÷_?¼şvŸß‡ÿà|ûß¼î¿ºô™S‡ŸigiÑ_±OÃxCü}şßÃfOå?Êjø²k×Vãÿ‡ı??Ñ+àUZÃ÷wÿŞ®êÑ8ïü(ú£×Ò¾y±ïÿÅ×/ìÛ´İTá†ïUùÿµXÿš%Ëvğ‰ıo|§şÙ¿À=ÿ§­õÉû¯[¯ôÛöw]–¼«ã¿ÇY<ñ_ò=nızh=?«]Šu¨×ğûÿÿ_ÿö÷í—‡4ıaô=¿´¢ãMª­¿]&d&Ü¥şúßª}áşî‰õÃUñıNÓÔúV{Ò!Şë÷áö¶¬’^æWı1 ½ŞËmÕëÿôû_U_ÿ²oş5pÊN±¶Çf¹ÿ‡ˆÓßÿkúöïÊ9jåp{8İÿ'èÿïfÕ~©¨·úøxı}û/¿[ëéß­^õ®ßÿ§ş½tü‡ÿ¾¾È˜'¸Ã•¸ó~ E×áhÔo_Çğ\V£öÔ/t¹}ø_¥'fRÆußÀïã-u•*/¿%ğÿï¸jîü÷¯6É5iëú¸ãºÑ¯Kÿ¥óÿí´õ¯í]®¯Î
+ûÖúôÿıoú¯wñ_/Zù,)˜»ğõÁ1ÿæŞuZ«ËgÃı:“¿¿«Ç÷œt…Ÿûü»äİm|;¿ÿqı/ıñs”NpÚ»÷ãBµ|~\‹áôf¨[Ÿ/UèØ§'®›®ÓSîo	Õ§höŸ$uùªæ\»7­µÆûÕ=ÿzğ]ëÁ¯«Kÿ/Uïôût¥iâ­ë6†Yÿ«ëÕûK­_oé¿{¹ÿ]æÿ?r\ÖÀÆ¨liRU©Ãã¼¹şUó½o.¹÷%¿şÁÎÙ.ShÆÃÿı©¿u_Sïîiw¯] ~‡\ø×±2Cxï·ÿÍ­õ?¯lş'å¿ûzòïßúÎùû5Lç|÷»ÿKëûÿø_ïY´^Õ³\üdú›bfbFüw›F¿Yø¡nªÍüëPÉ©Ò(±;øël	÷½S»¾°Tïş½û÷§G¾ÍáókÚ]r­$¾ºWÙı‘D¼~îû_{_şÆ÷7û—äAµ|ïÆpşåàÿ·¹†‡f[2ıı_•ïŞ¯w[ü‡ÿZÓşJ×ïıï?©{ôõ}•ö¿©}è¯5ı>m›ÏŒ×uÿÿãoü¿6‡ö¾™Ö?4ùÿq]Ûüı/İ¾·ğØÛx[şûÏßm½|±üï¿ëW¿İ²ûì¿U½>×şeéRgu÷­“»ªÕÿo÷úßüßş·Ò;kõMœÀîZGkm?üoë¿ü~÷ßŠûö×\ÇûËÿ]Û»?vús«òËÔjş[òÏ×¾z_ùüÿZ•ní¯,í¿ÿ~uµÍórì65‚ş—«ı]E¯;gı€{¿Éwãğïÿnm$~a­ï?ş_şAçı[j¸>æ/ÔÒ:Û7zSd;_	èúëíúNë{•¯ß#ø³^).ıf=F¨£ĞJm45—ûc©qíß¿~üÊİÂ~¸×eÿunéŞ&øÇrxoıÏ5Ú0I©®=ik5yîª	ÿ7§ğÏ}Z'¹†/Üç›­ÿt¦İ­¹¥?Nôv?TWı«¡;ÿÇ°³şK=Şß½ßï™Õ; ÷õÏîş¸[şÿvngJ>Ö ¯×­Ëÿınû.Mh~zÁk®¤ŸşÕòş¿»ÒÇ¦ó?†ıı»ô­Ëß7şø_õºïÙÙq…ŞZÕÿ¿»ÜôôZÇÔwî/~U×BÉ»Ó·NüŞ…×ÿí¾ş.”7ÓöåU×zíÿÛoı^Zıßí:¿jıé_ä½¯­w·úßúôÿò»ŸöÃõª¼ş?¯Éü ›WC5i7Ç?ŠaYOŸo¿¸|ªh¶/=3V?Uz«éqëáyÿ×ëÿÕ»ï½Zuïì¿:]± ó~™vûBÿF•ş—¬öç«/ü+vmLúikî»é¯Oµóm­¯‡{÷û¿×õµúÿßÕûİàÚ®JûÁÛ"/_zÿêë®×|ùmˆnPÿ×õ»¾ûı½eúEèbñºLÿ%_uiGì›I»Yí^Ğû4w¯\µ:ŸşuçœØ+‚ºìÏwzi+L¿÷ßêëZéÿ·¿ôÚèÇıÀ/©¯tå9Ö;”È}Ğ¯úgİÿ/|ÒzÎ²3Şcä/ÎÕ1øÚúÍhèo%}çşú´wv Ù¬kG¥ïÿ•oı&-ı–*ÿ÷ß•vúªê¿W©·±¯4ÔÿÿéÃ¿¯¿«õí_ç;írœ}½Ôû¯5rıîÖîõ[åïP_mÕÛNßjzª;ù«ßüõ³Ö¢Šÿ½qûí7Z¨äíş`gb÷p{ên_ÂÏ×os¡wí´®İ~më÷yH·‹›ŸœJTØÅ›Ò
+’¡7œİïô~¾«×™ôõêúÔq>ü_Æİ÷Wå¾ş?×¿ÿOyü³P£üõx¥÷¾¿¾VÜ·ö3¥„~x˜ø{bFõ’ºîúúíï½jåÒŞî×Ó¼§Ë×øğÏê»ÎØL|¸W±}ÓğıËw.?ª‚ëïµ?d,phjê¸İ÷ë×Ÿùüß¤¾fü»+txéÜìÿo Õÿ°3ú)B×÷ÿ¿ıûSÇè¬:¢ewí´•úí<|ó‚IŸªŸxku_¿_Èû] ^³Oh_öÃ~µøAøOšP}ñ·ümûì/^ğZÿœóÿµ{û—~Û=¿,¹ãoÖ¯÷=öÿ~EüıÇä½JÖ¥Ş•~T6ÿÓBóÍá’~%ÿû±`]+»»WÙ÷¼q¿†£®ÿoéU~(Âıé+‹/Ùz{ÎÃıKşëO_Ty½J÷ï/k%}ôl·şuó™ü¬ro7ÏîüuZ‰w_µ’îO^‘Õ.*7òªşà®ÿ\Åÿ‡jµ__½Üşüßz¢x}ã¶şïôãUgïşl…ÏkyWúÆÿÿ7õşÿ´TÏ}­»ˆªãÛÿRz§mcª‡¿Â#v÷ıº«>şıv‡»†ur÷4Ö(W¶Ø•-¬y{fndî?¿¿÷Ãÿ•ş³ıóŸ"ƒÇ-Æ3şŞ[ÿóòçujvìk²?•ÈİõJ1¿ß{y¼Z{^ÿÿßäÿûbÿ}½À«¯Ï]b÷ 3<ÿOîéw!»´Ş×ïLÿé¬¡üjëõ°¼ÕÕÚå»vı¿Íÿq5ùZİ$tŒ’ö‡òÍŞòg:ì;İ½ÓìËâ_})X’—.ªpwçb‘m¯P%-ÿÏÔ?zïúe~ÿïëúÜÿÿ›ró´
+vÿ~ûş×kßı}{î'éåNñovï÷ÿ{,ßV—£ğë=,ú¯®ú[U~]º÷ıßø»¼îù†û Ã7‡üú5¿¿×óõg§ÿ[Êş_ı^î¿ZùednüĞdóŠ’Ş"ğşíTÿvíjJ»İc·Şø¾ı:U}½ìù7ë!_ÿ]ú÷®î¸ÒW¥Ú×ÿcK«òÚe~t’—ÕôuòËş~·–×ºº•u]õ ø«õ¯ßæòÓ=şË¯:ÿèşãGS®sA#ë÷<´?>ĞğËëÿ²l‘<_%p¾smœwÀ^ñaİÙÿûë^Íñ×şî{¨ÕÅW¥kôcÿ•¶º/~õëä*ÿOfëûïı_×ê~{ßI“¼¿o5vµªêÓ¾õğıÕ¾»W—ÚÕ‹äÊküú@•{|]ïïú?zıÿtÜÿ†È·şˆİobfbNl]ÿÇ™ÿÿqkş?EÁŸUŸ?ğ¿zaÿå~oîŸIKÎu+Ú×…¶ÚL?ôt}UûÃÒÈşnÓU7©åëĞ5ıU¿åùusıZş¡}mîúàÁn]êı_ı«­ª]+u‡W¿ÿ2mı=îÆŞQ}Ó:\OÿŸNÿyáÿcşdõÂ,¨1÷‘W­«ì?æo]}üõ¾İÿ{íşG½÷-Î›*+
+¯áqòÆ~&çïAgtë½õïïwèv¼ö¦VÿVü»Ô×<ŞÇ4ÛúÕú¿ü]»=d•§ñú2xj¬7áš_ºÖßnÿqPé×ß×>órUşğÁ?²¦÷§$½rkªñDİÍ&ßøÿè‹ú%}p¯ú½ßWı¨çº¦5t¾ì¶
+—·iº›VîÿZïZU>5Ú¿¢Ğøàwõ·ïç:z¸¶ğr¿Íİù¿¯·ğ=¹|§WŸ¾§÷Ø•¾>)ÿ}é¿kí_ıéÕ|ÿû¯,nü`×‚—Îw÷·ø¯ä¤îmtl©£ø•ğn¿#"İ7Ùû¦ÿÒ?ê½6¬İäã¿ü{¤ÿ«Öíûş/}VÏ×”ëñU…ÀÜ§~ınÛş¼^Ó‡÷{}¿tşyïr/Ë×î§ê÷¿~=ø¿×¿¥©½t«İÿò6ø»¶Ş=ÿú¿ğßWºÿûã×ôßÏş>Zy½…ôæTd_ÖpdfbgîÿÖ~ÊÕëOªçU/¬${ı_Íû¿osÿ¶ÑÕ·©¥¸èošİ?ò7è—740Òõ¾åwm]Ë&İnü’¦Yu„ eVˆIõêß.ßĞ³qª¿Şïu·Kï{ô~-àW“ÿ‰ü¯zî§İKĞß®<ëØ¥~$¿ô–êß×ÿÍøï$¨©úÿUß|^ÿÅ£o':*—Eéêğ¬~uÿûJå_ç.ø)ı½O÷ã³µ¾üÿ>’ÚßºÌõô«îô{—÷ò”µ>ªZÿË³®ÿO÷äw­Wÿ¶ıo5´ÿà+ısïÕWVÿª>èı½×µïõuÿî¨ç×O/ı·Ì¿µ\ıõì/}õ­ÿ¿¿¿mıü!·Ë_ë¼ÊZ;œqİ»­¯éN4WXIş¿Wù.SW©¾~ÿßëë¿øû¿¥û}?ç¿şQÈ¾]ÒğOğ?oşëaP÷õ?‹®øáî%Û“ı:ô÷şö¿‘ªv•Ñ­jYjí?E~xÜ'â²—¾¾±õ]JÇŠFîup¼çëôµ_õ÷ô¡6½s¼öµï¯¯İo7>é«ÈïË«ñøúúcs·[º¼Ÿ™şÁLíıx¸]_-wÿ¾èÂÔ	µ[ÏÿKCŠ/¯4pã(şoAÎÍ«¾jxşıuÃ¿ÿÉ¾¯ÓÕñ—{ÚùqêF]Òfÿ¯³°head.show-for-touch { display: table-header-group !important; }
   tbody.hide-for-touch { display: table-row-group !important; }
   .touch tbody.show-for-touch { display: table-row-group !important; }
   tr.hide-for-touch { display: table-row !important; }
